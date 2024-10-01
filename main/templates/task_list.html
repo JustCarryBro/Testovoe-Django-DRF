@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Список задач</title>
+</head>
+<body>
+    <h1>Список задач</h1>
+    <table>
+        <tr>
+            <th>Имя</th>
+            <th>Описание</th>
+            <th>Статус</th>
+        </tr>
+        {% for task in tasks %}
+        <tr>
+            <td>{{ task.name }}</td>
+            <td>{{ task.description }}</td>
+            <td> {{task.get_level_display}}</td>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
